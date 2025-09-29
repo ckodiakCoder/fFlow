@@ -1,0 +1,56 @@
+<div class="flow-canvas-box">
+  <f-flow fDraggable class="flex-1 min-h-0">
+    <f-canvas class="flex-1 min-h-0">
+
+      <!-- A connection -->
+      <f-connection fOutputId="taskOut" fInputId="decisionIn"></f-connection>
+
+      <!-- Task Node -->
+      <div
+        fNode
+        fDragHandle
+        [fNodePosition]="{ x: 48, y: 48 }"
+        fNodeOutput
+        fOutputId="taskOut"
+        fOutputConnectableSide="right"
+        class="p-4 rounded-lg shadow bg-white border min-w-[160px] flex flex-col gap-2"
+      >
+        <div class="flex justify-between items-center">
+          <h3 class="text-sm font-semibold">Task Node</h3>
+          <span class="bg-amber-100 text-amber-800 text-xs px-2 py-0.5 rounded">
+            ⏳ Pending
+          </span>
+        </div>
+        <button
+          class="bg-blue-500 text-white px-3 py-1 rounded-md text-xs hover:bg-blue-600 transition"
+        >
+          Run Task
+        </button>
+      </div>
+
+      <!-- Decision Node -->
+      <div
+        fNode
+        fDragHandle
+        [fNodePosition]="{ x: 320, y: 120 }"
+        fNodeInput
+        fInputId="decisionIn"
+        fInputConnectableSide="left"
+        class="p-4 rounded-lg shadow bg-white border min-w-[160px] flex flex-col gap-2"
+      >
+        <h3 class="text-sm font-semibold">Decision Node</h3>
+        <div class="flex justify-between gap-4 text-sm">
+          <label class="flex items-center gap-1">
+            <input type="radio" name="decision" checked class="accent-blue-500" />
+            Yes
+          </label>
+          <label class="flex items-center gap-1">
+            <input type="radio" name="decision" class="accent-red-500" />
+            No
+          </label>
+        </div>
+      </div>
+
+    </f-canvas>
+  </f-flow>
+</div>

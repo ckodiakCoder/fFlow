@@ -1,0 +1,51 @@
+.landing-container {
+  min-height: 100vh;
+  padding-top: 10rem; // space for navbar
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // justify-content: center;
+  background-color: #ededed; // Tailwind gray-50
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 3rem;
+    color: #111827; // Tailwind gray-900
+    text-align: center;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 64rem;
+    width: 100%;
+
+    a {
+      display: block;
+      padding: 1.5rem;
+      background-color: white;
+      text-align: center;
+      border-radius: 0.75rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      font-weight: 500;
+      text-decoration: none;
+      color: #111827;
+
+      &:hover {
+        background-color: #ebf8ff; // Tailwind blue-50
+      }
+    }
+
+    @media (min-width: 640px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}

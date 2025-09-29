@@ -1,0 +1,10 @@
+.flow-canvas-box {
+  border: 2px solid #d1d5db; /* gray-300 */
+  border-radius: 0.75rem;     /* rounded-xl */
+  background-color: #f9fafb; /* gray-50 */
+  height: calc(100vh - 6rem); /* full height minus navbar/sidebar */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin: 0 auto; /* centers box in main-content */
+}

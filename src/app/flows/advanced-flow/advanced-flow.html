@@ -1,0 +1,33 @@
+<div class="flow-canvas-box">
+  <f-flow fDraggable class="flex-1 min-h-0">
+    <f-canvas class="flex-1 min-h-0">
+      <f-connection fOutputId="out1" fInputId="in1"></f-connection>
+
+      <!-- Node A -->
+      <div
+        fNode
+        fDragHandle
+        [fNodePosition]="{ x: 70, y: 60 }"
+        fNodeOutput
+        fOutputId="out1"
+        fOutputConnectableSide="right"
+        class="p-4 rounded-lg shadow bg-white border"
+      >
+        <h3 class="text-sm font-semibold">Node A</h3>
+      </div>
+
+      <!-- Node B -->
+      <div
+        fNode
+        fDragHandle
+        [fNodePosition]="{ x: 250, y: 80 }"
+        fNodeInput
+        fInputId="in1"
+        fInputConnectableSide="left"
+        class="p-4 rounded-lg shadow bg-white border"
+      >
+        <h3 class="text-sm font-semibold">Node B</h3>
+      </div>
+    </f-canvas>
+  </f-flow>
+</div>
